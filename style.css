@@ -1,0 +1,33 @@
+#monster {
+    width: 300px;
+    height: 379px;
+    position: relative;
+}
+
+.eye1, .eye2 {
+    position: absolute;
+    top: 45px;
+}
+
+.eye1 {
+    right: 173px;
+}
+
+.eye2{
+    left: 210px;
+}
+
+img.eye1, img.eye2 {
+    -webkit-animation: mover 7s  ; /************** Permet d'être lu par Safari, Opéra et Chrome ***********/
+    animation: mover 7s infinite ; /************** Adapté à tous les navigateurs restant ***************/
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); } : /*************** Position de départ ***********************/
+    15% { transform: translateY(-8px); } /*************** Axe Y qui monte (valeur négative) ***********************/
+    30% { transform: translateX(15px); } /*************** Axe X qui va à droite (valeur positive) ***********************/
+    45% { transform: translateY(10px); } /*************** Axe Y qui va en bas (valeur positive) ***********************/
+    60% { transform: translateX(-9px); } /*************** Axe X qui va à gauche (valeur négative) ***********************/
+    100% { transform: translateY(0); } /*************** Retour point de départ (valeur 0) ***********************/
+}
+
